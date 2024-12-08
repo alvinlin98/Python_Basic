@@ -206,13 +206,13 @@ print(ans)
 ans = 101 * 50
 print(ans)
 
+
 """ 隨堂測驗 """
 # Q1
-dayfactor = 0.005
-dayup = round(pow(1 + dayfactor, 365), 2)
-daydown = round(pow(1 - dayfactor, 365), 2)
-print(dayup)  # 6.17
-print(daydown)  # 0.16
+A = 10000000 * 30
+B = pow(2,30) # 或者 2 ** 30
+print(A)
+print(B)
 
 # Q2
 num = 10 + True
