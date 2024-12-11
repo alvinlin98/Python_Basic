@@ -71,3 +71,149 @@ print(str2[::-1])    # 拾玖捌柒陸伍肆叄貳壹零
 # 字串是一個不可變的物件
 str3 = "Hello"
 str3[0] = "A"   # TypeError: 'str' object does not support item assignment
+
+""" 跳脫字元 """
+# 單引號「'」
+str1 = "這是\'單引號"
+print(str1)
+
+# 雙引號「"」
+str1 = "這是\"雙引號"
+print(str1)
+
+# 反斜線
+str1 = "這是\\反斜線"
+print(str1)
+
+# 換行
+str1 = "這是\n換行"
+print(str1)
+
+# 游標移到列首
+str1 = "這是\r游標移到列首"
+print(str1)
+
+# Tab
+str1 = "這是\tTab"
+print(str1)
+
+# 倒退鍵(BackSpace)
+str1 = "這是\b倒退鍵(BackSpace)"
+print(str1)
+
+# 以十六進位表示字元
+str1 = "\x48\x69"
+print(str1)
+
+# 以八進位表示字元
+str1 = "\110\151"
+print(str1)
+
+""" 字串運算子(Operator) """
+# +
+a = 'Hello,'
+b = 'Python'
+print(a + b)  # Hello,Python
+
+# *
+a = 'Python,'
+print(a * 3)  # Python,Python,Python,
+
+# []
+a = 'Python'
+print(a[2])  # t
+
+# [:]
+a = 'Python'
+print(a[2:4])  # th
+
+# in
+a = 'Python'
+print('x' in a)  # False
+print('y' in a)  # True
+print('p' in a)  # False
+
+# not in
+a = 'Python'
+print('x' not in a)  # True
+print('y' not in a)  # False
+
+
+""" 字串函數 """
+# str()
+a = 3.0
+b = "輸入的數值是："
+print(b + str(a))
+
+# lower()
+a = "PYTHON"
+print(a.lower())  # python
+
+# upper()
+a = "python"
+print(a.upper())  # PYTHON
+
+# capitalize()
+a = "python"
+print(a.capitalize())  # Python
+
+# find()
+a = "hello world"
+print(a.find("world"))  # 6
+
+# index()
+a = "hello world"
+print(a.index("o"))  # 4
+
+# replace()
+a = "hello world"
+print(a.replace("world", "Python"))  # hello Python
+
+# split()
+a = "1,2,a,b"
+b = a.split(",")  # ['1', '2', 'a', 'b']
+
+# join()
+a = [1, 2, 'a', 'b']
+print("-".join(b))  # 1-2-a-b
+
+# strip()
+a = "  hello  "
+print(a.strip())  # hello
+print(a.lstrip())
+print(a.rstrip())
+
+""" 隨堂測驗 """
+# Q1
+print(7 + "13")
+
+# Q2
+a = "這是資料型別-字串的隨堂測驗"
+print(a[2:-5])
+
+# Q3
+# \b 是倒退鍵
+
+# Q4
+# round() 是數值函數
+
+# Q5
+student = "    林小宇武技安   "
+math1 = 100     # 林小宇的數學成績
+math2 = 87      # 武技安的數學成續
+english1 = 99   # 林小宇的英文成績
+english2 = 78   # 武技安的英文成績
+
+student1 = student.strip()[0:3]
+student2 = student.strip()[3:6]
+
+print("\\"+student1+"\\")
+print("數學：" + str(math1) + " 分")
+print("英文：" + str(english1) + " 分")
+print("總成績：" + str(math1 + english1) + " 分")
+print("總成績：" + str(round((math1 + english1)/2,1)) + " 分")
+print("\\"+student2+"\\")
+print("數學：" + str(math2) + " 分")
+print("英文：" + str(english2) + " 分")
+print("總成績：" + str(math2 + english2) + " 分")
+print("總成績：" + str(round((math2 + english2)/2,1)) + " 分")
