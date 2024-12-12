@@ -183,6 +183,47 @@ print(a.strip())  # hello
 print(a.lstrip())
 print(a.rstrip())
 
+""" Lab 1 字串型別與轉換 """
+name = "Owen"
+age = 9
+hobby = "coding"
+
+result = name + " is " + str(age) + " years old and loves " + hobby + "."
+print(result)
+
+""" Lab 2 處理跳脫字元與子字串提取"""
+text = "***Python\nis\tawesome!***"
+print(text)
+# 移除跳脫字元
+clean_nt = text.replace("\n", " ").replace("\t", " ")
+print(clean_nt)  # Python is awesome!
+
+# 前後3碼不要取
+clean_text = clean_nt[3:-3]
+print(clean_text)
+
+# 提取 "awesome"
+wordlist = clean_text.split()
+print(wordlist)
+word = wordlist[-1]
+print(word)  # awesome
+
+
+""" Lab 3 字串運算與方法應用 """
+s = "  Learn Python, Python is fun!  "
+# 去除前後空白並轉小寫
+s_cleaned = s.strip().lower()
+print(s_cleaned)  # learn python, python is fun!
+
+# 計算 "Python" 的出現次數（不分大小寫）
+count = s_cleaned.count("python")
+print(count)  # 2
+
+# 替換 "Python" 為 "coding"
+s_replaced = s_cleaned.replace("python", "coding")
+print(s_replaced)  # learn coding, coding is fun!
+
+
 """ 隨堂測驗 """
 # Q1
 print(7 + "13")
